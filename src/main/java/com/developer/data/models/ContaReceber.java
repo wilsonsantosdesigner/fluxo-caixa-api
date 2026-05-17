@@ -1,8 +1,10 @@
-package com.developer.models;
+package com.developer.data.models;
 
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -12,7 +14,7 @@ import java.util.Date;
 @EqualsAndHashCode(of = "id")
 @Getter
 @Setter
-public class ContasReceber {
+public class ContaReceber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,13 +29,9 @@ public class ContasReceber {
     Date dataVencimento;
 
     @Column(name = "data_recebimento")
-    Date dataRecebimento;
+    LocalDateTime dataRecebimento;
 
     @Column(name = "valor_recebido")
     Double valorRecebido;
-
-
-
-
 
 }
